@@ -14,7 +14,7 @@ In order to set up CI for your GitLab project you will first need to set up a fe
 
 Here is an example CI configuration for a project with two environments:
 
-```
+```yaml
 image: dmitrybelyakov/gitlab-docker-execturor
 
 # configure ssh
