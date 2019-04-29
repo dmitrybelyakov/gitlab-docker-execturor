@@ -7,7 +7,7 @@ Your exact CI scenario is executed by the runner as an Ansible playbook ran agai
 In order to set up CI for your GitLab project you will first need to set up a few secrets injected via environment variables. Go to your project > Settings > CI/CD > Environment variables and set:
 
   * `PROVISIONER_CHECKOUT_KEY` private key that is allowed to checkout provisioner playbooks
-  * `PROVISIONER_GIT_URL` git repository containing playbooks
+  * `PROVISIONER_GIT_URL` git repository containing the playbooks
   * `SERVER_ACCESS_KEY` private key with access to the server
 
 ### .gitlab-ci.yml
