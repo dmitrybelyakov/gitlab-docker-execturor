@@ -4,7 +4,7 @@ Docker image to be used as GitlabCI build runner. The image is distributed via D
 
 Your exact CI scenario is executed by the runner as an Ansible playbook ran against your target server(s).
 
-In order to set up CI for your GitLab project you will first need to set up a few secrets invected via environment variables. Go to your project > Settings > CI/CD > Environment variables and set:
+In order to set up CI for your GitLab project you will first need to set up a few secrets injected via environment variables. Go to your project > Settings > CI/CD > Environment variables and set:
 
   * `PROVISIONER_CHECKOUT_KEY` private key that is allowed to checkout provisioner playbooks
   * `PROVISIONER_GIT_URL` git repository containing playbooks
