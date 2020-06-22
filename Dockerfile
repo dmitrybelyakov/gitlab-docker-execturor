@@ -12,6 +12,18 @@ RUN apt-get -yqq install git
 RUN apt-get -yqq install ssh
 RUN apt-get -yqq install openssh-client
 RUN apt-get -yqq install ansible
+RUN apt-get -yqq install curl wget unzip
+
+# install aws cli
+RUN ln -fs /usr/share/zoneinfo/Europe/London /etc/localtime
+RUN apt-get -yqq install awscli
+RUN aws --version
+
+# install terraform
+RUN wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
+RUN unzip terraform_0.12.26_linux_amd64.zip
+RUN mv terraform /usr/local/bin/ && unlink terraform_0.12.26_linux_amd64.zip
+RUN terraform --version
 
 # clear apt cache
 RUN rm -rf /var/lib/apt/lists/*
