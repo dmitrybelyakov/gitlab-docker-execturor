@@ -12,3 +12,6 @@ __pycache__
 nbproject
 www.esproj
 *.code-workspace
+
+# project ignores
+/env
