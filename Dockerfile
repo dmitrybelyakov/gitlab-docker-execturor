@@ -14,6 +14,12 @@ RUN apt-get -yqq install openssh-client
 RUN apt-get -yqq install ansible
 RUN apt-get -yqq install curl wget unzip
 
+# install node
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN  apt-get install -y nodejs
+RUN node --version
+RUN npm --version
+
 # install aws cli
 RUN ln -fs /usr/share/zoneinfo/Europe/London /etc/localtime
 RUN apt-get -yqq install awscli
