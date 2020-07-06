@@ -13,6 +13,7 @@ RUN apt-get -yqq install ssh
 RUN apt-get -yqq install openssh-client
 RUN apt-get -yqq install ansible
 RUN apt-get -yqq install curl wget unzip
+RUN apt-get -yqq install rsync
 
 # install node
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
