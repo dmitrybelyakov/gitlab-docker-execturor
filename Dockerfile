@@ -20,9 +20,9 @@ RUN apt-get -yqq install awscli
 RUN aws --version
 
 # install terraform
-RUN wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip
-RUN unzip terraform_0.12.26_linux_amd64.zip
-RUN mv terraform /usr/local/bin/ && unlink terraform_0.12.26_linux_amd64.zip
+RUN wget https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip
+RUN unzip terraform_0.12.28_linux_amd64.zip
+RUN mv terraform /usr/local/bin/ && unlink terraform_0.12.28_linux_amd64.zip
 RUN terraform --version
 
 # clear apt cache
