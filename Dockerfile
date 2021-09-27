@@ -16,6 +16,7 @@ RUN apt-get -yqq install openssh-client
 RUN apt-get -yqq install ansible
 RUN apt-get -yqq install curl wget unzip
 RUN apt-get -yqq install rsync
+RUN apt-get -yqq install zip unzip
 
 
 # install node
@@ -31,9 +32,9 @@ RUN ln -s /root/.local/bin/aws /usr/local/bin
 RUN aws --version
 
 # install terraform
-RUN wget https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip
-RUN unzip terraform_0.12.28_linux_amd64.zip
-RUN mv terraform /usr/local/bin/ && unlink terraform_0.12.28_linux_amd64.zip
+RUN wget https://releases.hashicorp.com/terraform/1.0.7/terraform_1.0.7_linux_amd64.zip
+RUN unzip terraform_1.0.7_linux_amd64.zip
+RUN mv terraform /usr/local/bin/ && unlink terraform_1.0.7_linux_amd64.zip
 RUN terraform --version
 
 # clear apt cache
